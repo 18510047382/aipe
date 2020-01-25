@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aipe Test HTML</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="../dist/aipe.js"></script>
+    <script type="text/javascript">
+        // var aipe = aipe
+        //     .get('aidpe.html')
+        //     .then(function(res) {
+        //         console.log(1, res);
+        //     }).catch(function(){
+        //         console.log('oh no');
+        //         this.$request();
+        //     })
+        //
+        //     .post('aipe.html')
+        //     .then(function(res) {
+        //         console.log(2, res);
+        //     }).catch(function(){
+        //         console.log('oh no2')
+        //     })
+
+        aipe.config.validateStatus = status => {
+            return true;
+        }
+
+        const fd = new FormData();
+
+        fd.set('userName', 'Fred');
+
+        aipe.post('http://localhost:8888', {
+            data: fd,
+            headers: {'Content-Type': 'multipart/form-data' }
+
+            // data: {
+            //     name: ['Bill',' ff']
+            // }
+        })
+        .then(res => {
+            console.log(res);
+        })
+
+        // aipe.get('http://localhost:8888/hello?h=2&', {
+        //         headers: {
+        //             "Content-type": "application/x-www-form-urlencoded"
+        //         },
+        //         // data: {
+        //         //     name: 'Bill'
+        //         // },
+        //         data: '&&name=Bill Dong',
+        //         timeout: 1
+        //     })
+        //     .then(function(res) {
+        //         console.log(res, this.xmlhttp);
+        //     })
+        //     .catch(function(res) {
+        //         console.log('error', res);
+        //         this.$request();
+        //     })
+        //     .get('http://localhost:8888/hello?h=2&', {
+        //         headers: {
+        //             "Content-type": "application/x-www-form-urlencoded"
+        //         },
+        //         // data: {
+        //         //     name: 'Bill'
+        //         // },
+        //         data: '&&name=Bill Dong',
+        //         timeout: 0
+        //     })
+        //     .then(function(res) {
+        //         console.log(res, this.xmlhttp);
+        //     })
+        //     .catch(function(res) {
+        //         console.log('error', res)
+        //     })
+    </script>
+</body>
+
+</html>

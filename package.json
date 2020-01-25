@@ -1,0 +1,27 @@
+{
+    "name": "aipe",
+    "version": "1.0.0-alpha",
+    "description": "Promise-style ajax framework, support IE6 and Typescript",
+    "main": "aipe.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ajax",
+        "promise",
+        "ie6",
+        "typescript"
+    ],
+    "author": "Bill Dong",
+    "license": "MIT",
+    "devDependencies": {
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.5",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    }
+}
